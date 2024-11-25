@@ -1,0 +1,143 @@
+/* Estilo Geral */
+body {
+  margin: 0;
+  font-family: "Elvish Ring NFI", sans-serif;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Cores e temas */
+.app {
+  background-color: #f5f5dc; /* Bege claro */
+  color: #000; /* Preto */
+  min-height: 100vh;
+  padding: 20px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.app.dark-mode {
+  background-color: #2b2b2b; /* Cinza escuro */
+  color: #f5f5dc; /* Bege claro */
+}
+
+/* Títulos */
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #000; /* Preto no modo claro */
+  transition: color 0.5s ease;
+}
+
+.app.dark-mode h1 {
+  color: #fff; /* Branco no modo escuro */
+}
+
+/* Botão de modo escuro */
+.dark-mode-toggle {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  background-color: #ffa07a; /* Laranja claro */
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #ff8c66;
+  transform: scale(1.05);
+}
+
+.dark-mode-toggle:focus {
+  outline: 2px solid #ff8c66; /* Foco visível */
+}
+
+/* Alterações no botão no modo escuro */
+.app.dark-mode .dark-mode-toggle {
+  background-color: #444; /* Cinza escuro */
+  color: #f5f5dc; /* Bege claro */
+}
+
+.app.dark-mode .dark-mode-toggle:hover {
+  background-color: #666;
+}
+
+/* Filtros */
+.filters {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  background-color: #ffa07a; /* Laranja claro */
+  color: #000; /* Preto */
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filters button:hover {
+  background-color: #ff8c66;
+  transform: translateY(-2px);
+}
+
+.filters button:focus {
+  outline: 2px solid #ff8c66;
+}
+
+/* Lista de tarefas */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: #fff7e6; /* Fundo claro */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.5s ease;
+  color: #000; /* Preto padrão */
+}
+
+.todo-item.completed {
+  background-color: #d3ffd3; /* Verde claro */
+}
+
+.todo-item:hover {
+  transform: scale(1.02);
+}
+
+/* Alteração no texto das tarefas no modo escuro */
+.app.dark-mode .todo-item {
+  color: #000; /* Preto no modo escuro */
+  background-color: #faf6f6; /* Fundo mais claro */
+}
+
+.todo-item span {
+  cursor: pointer;
+}
+
+.todo-item button {
+  background-color: #ff6666;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.todo-item button:hover {
+  background-color: #ff3333;
+}
+
+.todo-item button:focus {
+  outline: 2px solid #ff3333;
+}
+
