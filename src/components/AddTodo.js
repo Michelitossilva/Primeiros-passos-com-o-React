@@ -13,20 +13,24 @@ const AddTodo = ({ addTodo }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="add-todo-form">
       <input
         type="text"
         placeholder="Adicionar uma tarefa..."
         value={task}
         onChange={(e) => setTask(e.target.value)}
-        style={{ marginRight: "10px" }}
+        className="task-input"
       />
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+      <select
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+        className="category-select"
+      >
         <option value="Work">Trabalho</option>
         <option value="Personal">Pessoal</option>
         <option value="Study">Estudo</option>
       </select>
-      <button type="submit">Adicionar</button>
+      <button type="submit" className="add-button">Adicionar</button>
     </form>
   );
 };
